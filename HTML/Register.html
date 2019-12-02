@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Register</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="PasswordValidation.js"></script>
+    </head>
+    <body style="font-family: 'Comic Sans MS'">
+        <div class="navbar">
+            <a href="Home.html">ATC.com</a>
+            <a href="Categories.html">Categories</a>
+            <a href="Write.html">Write an Article</a>
+            <a href="ContactUs.html">Contact Us</a>
+            <a href="SignIn.html" class="right">Sign In</a>
+        </div>
+        
+        <div class="container_contact">
+            <div style="text-align: center">
+                <h2>Register</h2>
+                <p>Join Us</p>
+            </div>
+            
+            <div class='row'>
+                <div class='column_contact'>
+                    <form action='PHP/register.php' method="post">
+                        <label for="username"><b>Username</b></label>
+                        <input type="text" id="userName" name="userName" placeholder="Your username.." pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}" required>
+                        <label for="email"><b>Email</b></label>
+                        <input type="email" id="email" name="email" placeholder="Your email.." style="width: 100%;padding: 12px 20px;margin: 8px 0;display: inline-block;border: 1px solid #ccc;box-sizing: border-box;" required>
+                        <label for="password"><b>Password</b></label>
+                        <input type="password" id="password" name="password" placeholder="Your password.." pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+                        <label for="confirmPassword"><b>Confirm Password</b></label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm password.." pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+                        <input type="submit" name="register" value="Register">
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        
+    </body>
+</html>
